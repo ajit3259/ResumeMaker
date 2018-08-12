@@ -1,0 +1,19 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "THE PLACE WHERE YOU CAN YOUR RESUME",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AJIT KUMAR",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "html": "^1.0.0",
+    "npm": "^6.3.0",
+    "request": "^2.88.0"
+  }
+}
