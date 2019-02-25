@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YOUR RESUME</title>
+	<link rel="stylesheet" type="text/css" href="resume.css">
+</head>
+<body>
+<div id = "header">
+	<div class="left">
+		<h1> <%= data.firstName %><%= " " %> <%= data.lastName %> </h1>
+		<img src="images/image001.png"><h5><%= data.address %></h5>
+	</div>
+
+	<div class="right">
+		<img src="images/image003.png"><h5><i><%= data.email %></i></h5><br>
+		<img src="images/image002.png"><h5><i><%= data.phone %></i></h5><br>
+		<% if(data.website){ %>
+		<img src="images/image005.png"><h5><i><%= data.website %></i></h5>
+		<% } %>
+	</div>
+</div>
+<br>
+
+<% if(data.objective){ %>
+<div id="objective">
+	<img src="images/image009.png" class="head"><span>OBJECTIVES</span>
+	<hr>
+	<p>
+		<%= data.objective %>
+	</p>
+</div>
+<br>
+<% } %>
+
+<div id = "Education">
+	<img src="images/image007.png" class="head"><span>EDUCATION</span>
+	<hr>
+	<table id="edu">
+		<tr>
+			<th>CLASS</th>
+			<th>SCHOOL/COLLEGE NAME</th>
+			<th>MARKS</th>
+			<th>YEAR OF PASSING</th>
+		</tr>
+		<tr>
+			<td>10 (MATRICULATION)</td>
+			<td><%= data.secName %></td>
+			<td><%= data.secMarks %> </td>
+			<td><%= data.secPass %></td>
+		</tr>
+		<tr>
+			<td>12 (INTERMEDIATE)</td>
+			<td><%= data.ssecName %></td>
+			<td><%= data.ssecMarks %></td>
+			<td><%= data.ssecPass %></td>
+		</tr>
+		<tr>
+			<td>GRADUATION</td>
+			<td><%= data.college %></td>
+			<td><%= data.gpa %></td>
+			<td>-</td>
+		</tr>
+	</table>
+</div>
+<br>
+<% if(data.work){ %>
+<div id="workExperience">
+	<img src="images/image008.png" class="head"><span>WORK EXPERIENCE</span>
+	<hr>
+	<div>
+		<%= data.work %>
+	</div>
+</div>
+<br>
+<% } %>
+
+<% if(data.projects){ %>
+<div id="projects">
+	<img src="images/image010.png" class="head"><span>PROJECTS</span>
+	<hr>
+	<div>
+		<p><%= data.projects %></p>
+	</div>
+</div>
+<br>
+<% } %>
+
+<% if(data.achievements){ %>
+<div id ="achievements">
+	<img src="images/image010.png" class="head"><span>ACHIEVEMENTS</span>
+	<hr>
+	<div>
+		<p><%= data.achievements %></p>
+	</div>
+</div>
+<% } %>
+
+
+
+
+
+</body>
+</html>
